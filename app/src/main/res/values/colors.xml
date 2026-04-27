@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Palette -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Equili Brand & Gamification Colors -->
+    <color name="cyan">#00FFFF</color>
+    <color name="dark_cyan">#008B8B</color>
+    <color name="orange_xp">#FFA500</color>
+
+    <!-- UI/UX Semantic Colors for a consistent fintech aesthetic -->
+    <color name="app_bg">#121212</color> <!-- Main background -->
+    <color name="app_card_bg">#20FFFFFF</color> <!-- Glassmorphism card effect background -->
+    <color name="app_card_stroke">#40FFFFFF</color> <!-- Border for glass cards -->
+    <color name="app_text_primary">#FFFFFF</color> <!-- Primary readability color -->
+    <color name="app_text_secondary">#AAAAAA</color> <!-- Secondary hints/labels -->
+    <color name="app_overlay">#90000000</color> <!-- Dark semi-transparent screen overlay -->
+</resources>

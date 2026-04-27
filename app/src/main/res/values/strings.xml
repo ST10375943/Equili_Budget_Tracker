@@ -1,0 +1,4 @@
+<resources>
+    <!-- The user-facing name of the application -->
+    <string name="app_name">Equili</string>
+</resources>

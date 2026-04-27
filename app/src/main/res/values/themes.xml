@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. Uses Material 3 components with no action bar. -->
+    <style name="Base.Theme.Equili" parent="Theme.Material3.Light.NoActionBar">
+
+        <!-- Primary branding colors mapping to the Cyan theme -->
+        <item name="colorPrimary">@color/cyan</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Default window appearance -->
+        <item name="android:windowBackground">@color/app_bg</item>
+
+        <!-- Custom semantic attributes used for UI components.
+             These allow for easy layout consistency even if the primary colors change. -->
+        <item name="appOverlayColor">@color/app_overlay</item>
+        <item name="appCardBackground">@color/app_card_bg</item>
+        <item name="appCardStroke">@color/app_card_stroke</item>
+        <item name="appTextColorPrimary">@color/app_text_primary</item>
+        <item name="appTextColorSecondary">@color/app_text_secondary</item>
+    </style>
+
+    <!-- The actual theme used by the app, inheriting from the base configuration -->
+    <style name="Theme.Equili" parent="Base.Theme.Equili" />
+
+    <!-- Definitions for custom attributes.
+         These must be declared so they can be referenced in XML layouts using ?attr/name. -->
+    <attr name="appOverlayColor" format="color" />
+    <attr name="appCardBackground" format="color" />
+    <attr name="appCardStroke" format="color" />
+    <attr name="appTextColorPrimary" format="color" />
+    <attr name="appTextColorSecondary" format="color" />
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🌄 High-Quality Background -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 🌫 Gradient Overlay for Professional Feel -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/appOverlayColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 🧘 BRANDING SECTION -->
+    <ImageView
+        android:id="@+id/ivLogoMain"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/equili_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAppNameMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equili"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:letterSpacing="0.1"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance Your Future"
+        android:textColor="?attr/appTextColorPrimary"
+        android:textSize="16sp"
+        android:alpha="0.7"
+        app:layout_constraintTop_toBottomOf="@id/tvAppNameMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 💰 ACTION CARD -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/glass_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take control of your money today."
+            android:textColor="?attr/appTextColorPrimary"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@color/black"
+            app:cornerRadius="12dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="?attr/appCardBackground"
+            android:textColor="?attr/appTextColorPrimary"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

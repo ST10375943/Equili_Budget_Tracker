@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    FileProvider paths configuration.
+    This allows the app to securely share files with external apps like the system Camera.
+-->
+<paths>
+    <!-- Configures access to the app's external files directory under 'Pictures' -->
+    <external-files-path name="my_images" path="Pictures" />
+</paths>
