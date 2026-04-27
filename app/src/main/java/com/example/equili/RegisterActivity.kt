@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.equili.data.model.UserModel
 import com.example.equili.ui.viewModel.ExpenseViewModel
+import com.example.equili.utils.ValidationUtils
 import kotlinx.coroutines.launch
 
 /**
@@ -41,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             // Step 2: Security check - validate password complexity
-            if (!isValidPassword(password)) {
+            if (!ValidationUtils.isValidPassword(password)) {
                 Toast.makeText(this, "Password must start with a capital, be 6+ characters, and contain a number and symbol", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
@@ -63,19 +64,5 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    /**
-     * Custom password validation logic.
-     * Criteria: 6+ characters, starts with uppercase, contains number, contains symbol.
-     */
-    private fun isValidPassword(password: String): Boolean {
-        if (password.length < 6) return false
-        if (!password[0].isUpperCase()) return false
-
-        val hasNumber = password.any { it.isDigit() }
-        val hasSymbol = password.any { !it.isLetterOrDigit() }
-
-        return hasNumber && hasSymbol
     }
 }
