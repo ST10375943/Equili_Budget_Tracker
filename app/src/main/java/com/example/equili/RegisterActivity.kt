@@ -2,6 +2,7 @@ package com.example.equili
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -19,6 +20,7 @@ import kotlinx.coroutines.launch
  */
 class RegisterActivity : AppCompatActivity() {
 
+    private val TAG = "RegisterActivity"
     private val viewModel: ExpenseViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,23 +39,28 @@ class RegisterActivity : AppCompatActivity() {
 
             // Step 1: Basic validation - check if fields are empty
             if (email.isEmpty() || password.isEmpty()) {
+                Log.w(TAG, "Registration failed: Empty fields")
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             // Step 2: Security check - validate password complexity
             if (!ValidationUtils.isValidPassword(password)) {
+                Log.w(TAG, "Registration failed: Password complexity not met for user $email")
                 Toast.makeText(this, "Password must start with a capital, be 6+ characters, and contain a number and symbol", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
 
             // Step 3: Database check and User creation
             lifecycleScope.launch {
+                Log.d(TAG, "Checking if user $email already exists in database")
                 val existingUser = viewModel.getUserByEmail(email)
                 if (existingUser != null) {
+                    Log.i(TAG, "Registration aborted: User $email already exists")
                     // Prevent duplicate accounts
                     Toast.makeText(this@RegisterActivity, "User already exists", Toast.LENGTH_SHORT).show()
                 } else {
+                    Log.i(TAG, "Registering new user: $email")
                     // Register the new user in the database
                     viewModel.registerUser(UserModel(email, password))
                     Toast.makeText(this@RegisterActivity, "Registration Successful", Toast.LENGTH_SHORT).show()
