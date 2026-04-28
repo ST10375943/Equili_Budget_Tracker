@@ -2,6 +2,15 @@
 
 Equili is a modern, gamified personal finance application for Android designed to help users track their spending, set financial goals, and visualize their financial health through interactive analytics.
 
+## 📺 Video Overview
+Watch the full demonstration of the app here: [Equili App Overview](https://youtu.be/XFsjSuqLHWY?si=8w56K7M61A-ceEjG)
+
+## 👥 Team Members
+- **DIMETRI PETES**
+- **GARREN GABRON**
+- **NELSON DE VOS**
+- **SILINDOKUHLE GQUKANI**
+
 ## 🚀 Features
 
 - **Personalized Dashboard:** Get an instant overview of your monthly spending, budget progress, and gamification stats.
